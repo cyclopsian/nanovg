@@ -3,7 +3,9 @@ project('nanovg', 'c', license: 'zlib')
 cc = meson.get_compiler('c')
 
 add_project_arguments(cc.get_supported_arguments([
-  '-Wno-misleading-indentation'
+  '-Wno-misleading-indentation',
+  '-Wno-sign-compare',
+  '-Wno-unused-but-set-variable',
 ]), language: 'c')
 
 nanovg_inc = include_directories('src')
